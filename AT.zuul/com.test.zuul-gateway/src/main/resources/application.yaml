@@ -6,23 +6,21 @@ server:
     key-store-type: PKCS12
     key-alias: tomcat
 
+endpoints:
+  restart:
+    enabled: true
+  shutdown:
+    enabled: true
+  health:
+    sensitive: false
+
 spring:
   application:
     name: ZUUL
-  cloud:
-    config:
-      discovery:
-        enabled: true
-        serviceId: ZUUL
+  
 
 ribbon:
-  IsSecure: true
-  eureka:
-    enabled: true
-
-
-
-  
+    IsSecure: true
 
 eureka:
   instance:
@@ -33,8 +31,9 @@ eureka:
       defaultZone: http://localhost:10090/eureka/
 
 zuul:
+  sslHostnameValidationEnabled: false
   routes:
     test:
       path: /**
-      serviceId: UX
-#     url: https://localhost:10091
+#     serviceId: UX
+      url: https://localhost:10091

@@ -1,5 +1,11 @@
 Manifest-Version: 1.0
+Implementation-Title: com.csc.fs.ngpa.eureka-server
+Implementation-Version: 0.0.1-SNAPSHOT
 Built-By: atiwari54
+Implementation-Vendor-Id: At.eurekaserver
 Build-Jdk: 1.8.0_121
+Implementation-URL: http://projects.spring.io/spring-boot/spring-cloud
+ -netflix-main/com.test.eureka-server/
 Created-By: Maven Integration for Eclipse
+Implementation-Vendor: Pivotal Software, Inc.
 
